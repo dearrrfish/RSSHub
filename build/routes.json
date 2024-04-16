@@ -14013,17 +14013,17 @@
         "parameters": {
           "type": "分類，預設為所有新聞"
         },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
         "name": "新聞中心",
         "maintainers": [
           "TonyRL"
+        ],
+        "radar": [
+          {
+            "source": [
+              "dcfever.com/news/index.php"
+            ],
+            "target": "/news"
+          }
         ],
         "description": "| 所有新聞 | 攝影器材 | 手機通訊 | 汽車熱話 | 攝影文化    | 影片攝錄    | 測試報告 | 生活科技 | 攝影技巧  |\n  | -------- | -------- | -------- | -------- | ----------- | ----------- | -------- | -------- | --------- |\n  |          | camera   | mobile   | auto     | photography | videography | reviews  | gadget   | technique |",
         "location": "news.ts"
@@ -14036,14 +14036,6 @@
         "example": "/dcfever/reviews/cameras",
         "parameters": {
           "type": "分類，預設為 `cameras`"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
         },
         "radar": [
           {
@@ -14070,14 +14062,6 @@
           "keyword": "關鍵字",
           "mainCat": "主要分類 ID，見上表"
         },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
         "name": "二手市集 - 物品搜尋",
         "maintainers": [
           "TonyRL"
@@ -14092,14 +14076,6 @@
         "example": "/dcfever/trading/1",
         "parameters": {
           "id": "分類 ID，見下表"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
         },
         "name": "二手市集",
         "maintainers": [
@@ -14288,6 +14264,36 @@
     },
     "name": "得到",
     "url": "dedao.cn"
+  },
+  "deepin": {
+    "routes": {
+      "/homepage/:user_id": {
+        "path": "/homepage/:user_id",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/deepin/homepage/78326",
+        "parameters": {
+          "user_id": "user id"
+        },
+        "name": "BBS Home Page",
+        "maintainers": [
+          "tensor-tech"
+        ],
+        "radar": {
+          "source": [
+            "bbs.deepin.org/user/:user_id"
+          ],
+          "target": "/homepage/:user_id"
+        },
+        "location": "homepage.ts"
+      }
+    },
+    "name": "Deepin",
+    "url": "bbs.deepin.org",
+    "zh": {
+      "name": "深度Linux"
+    }
   },
   "deeplearning": {
     "routes": {
@@ -17761,6 +17767,35 @@
     },
     "name": "ePrice",
     "url": "eprice.com.tw"
+  },
+  "esquirehk": {
+    "routes": {
+      "/tag/:id?": {
+        "path": "/tag/:id?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/esquirehk/tag/Fashion",
+        "parameters": {
+          "id": "标签，可在对应标签页 URL 中找到"
+        },
+        "name": "Tag",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.esquirehk.com/tag/:id",
+              "www.esquirehk.com/:id"
+            ]
+          }
+        ],
+        "location": "tag.ts"
+      }
+    },
+    "name": "Esquire Hong Kong",
+    "url": "www.esquirehk.com"
   },
   "europechinese": {
     "routes": {
@@ -22473,6 +22508,38 @@
         ],
         "description": "| 通知公告 | 中心工作动态 | 地方工作动态 | 监测信息 | 分析预测 | 调查报告 |\n  | -------- | ------------ | ------------ | -------- | -------- | -------- |\n  | 692      | 693          | 694          | 695      | 696      | 697      |\n\n  | 价格指数 | 地方价格监测 | 价格监测报告制度 | 监测法规 | 媒体聚焦 |\n  | -------- | ------------ | ---------------- | -------- | -------- |\n  | 698      | 699          | 700              | 701      | 753      |\n\n  #### 监测信息\n\n  | 国内外市场价格监测情况周报 | 主要粮油副食品日报 | 生猪出厂价与玉米价格周报 | 国际市场石油价格每日 动态 |\n  | -------------------------- | ------------------ | ------------------------ | ------------------------- |\n  | 749                        | 703                | 704                      | 705                       |\n\n  | 非学科类培训服务价格 | 监测周期价格动态 | 月度监测行情表 | 猪料、鸡料、蛋料比价 |\n  | -------------------- | ---------------- | -------------- | -------------------- |\n  | 821                  | 706              | 707            | 708                  |",
         "location": "jgjcndrc/index.ts"
+      },
+      "/jiangsu/wlt/:page?": {
+        "path": "/jiangsu/wlt/:page?",
+        "categories": [
+          "government"
+        ],
+        "example": "/gov/jiangsu/wlt",
+        "parameters": {
+          "page": "页数，默认第 1 页"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "wlt.jiangsu.gov.cn/"
+            ],
+            "target": "/jiangsu/wlt"
+          }
+        ],
+        "name": "江苏文旅局审批公告",
+        "maintainers": [
+          "GideonSenku"
+        ],
+        "url": "wlt.jiangsu.gov.cn/",
+        "location": "jiangsu/wlt/index.ts"
       },
       "/jinan/healthcommission/medical_exam_notice": {
         "path": "/jinan/healthcommission/medical_exam_notice",
@@ -29446,6 +29513,31 @@
     "name": "Issue Hunt",
     "url": "issuehunt.io"
   },
+  "itc": {
+    "routes": {
+      "/collection/:colType": {
+        "path": "/collection/:colType",
+        "categories": [
+          "blog"
+        ],
+        "example": "/itc/collection/1",
+        "radar": [
+          {
+            "source": [
+              "open.itc.cn/"
+            ]
+          }
+        ],
+        "name": "合集",
+        "maintainers": [
+          "cnkmmk"
+        ],
+        "location": "collection.ts"
+      }
+    },
+    "name": "Open Github社区",
+    "url": "open.itc.cn"
+  },
   "itch": {
     "routes": {
       "/devlog/:user/:id": {
@@ -29838,7 +29930,13 @@
           "filter": "过滤，见下表，默认为 `全部`"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "JAVDB_SESSION",
+              "description": "JavDB登陆后的session值，可在控制台的cookie下查找 `_jdb_session` 的值，即可获取",
+              "optional": true
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": true,
           "supportBT": false,
@@ -29931,7 +30029,13 @@
           "filter": "过滤，见下表，默认为 `全部`"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "JAVDB_SESSION",
+              "description": "JavDB登陆后的session值，可在控制台的cookie下查找 `_jdb_session` 的值，即可获取",
+              "optional": true
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": true,
           "supportBT": false,
@@ -29965,7 +30069,13 @@
           "time": "时间，见下表，默认为 `日榜`"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "JAVDB_SESSION",
+              "description": "JavDB登陆后的session值，可在控制台的cookie下查找 `_jdb_session` 的值，即可获取",
+              "optional": true
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": true,
           "supportBT": false,
@@ -30000,7 +30110,13 @@
           "sort": "排序，见下表，默认为 `按相关度排序`"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "JAVDB_SESSION",
+              "description": "JavDB登陆后的session值，可在控制台的cookie下查找 `_jdb_session` 的值，即可获取",
+              "optional": true
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": true,
           "supportBT": false,
@@ -30034,7 +30150,13 @@
           "filter": "过滤，见下表，默认为 `全部`"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "JAVDB_SESSION",
+              "description": "JavDB登陆后的session值，可在控制台的cookie下查找 `_jdb_session` 的值，即可获取",
+              "optional": true
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": true,
           "supportBT": false,
@@ -30068,7 +30190,13 @@
           "category": "分类，见下表，默认为 `有碼`"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "JAVDB_SESSION",
+              "description": "JavDB登陆后的session值，可在控制台的cookie下查找 `_jdb_session` 的值，即可获取",
+              "optional": true
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": true,
           "supportBT": false,
@@ -35241,11 +35369,23 @@
           "supportPodcast": true,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "mixcloud.com/:username/:type?"
+            ]
+          },
+          {
+            "source": [
+              "www.mixcloud.com/:username/:type?"
+            ]
+          }
+        ],
         "name": "User",
         "maintainers": [
           "Misaka13514"
         ],
-        "description": "| Shows   | Favorites | History | Stream |\n  | ------- | --------- | ------- | ------ |\n  | uploads | favorites | listens | stream |",
+        "description": "| Shows   | Reposts | Favorites | History | Stream |\n  | ------- | ------- | --------- | ------- | ------ |\n  | uploads | reposts | favorites | listens | stream |",
         "location": "index.ts"
       }
     },
@@ -38394,6 +38534,35 @@
     },
     "name": "南京中医药大学",
     "url": "lib.njucm.edu.cn"
+  },
+  "njuferret": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "categories": [
+          "blog"
+        ],
+        "example": "/njuferret/blog",
+        "radar": [
+          {
+            "source": [
+              "njuferret.github.io"
+            ]
+          }
+        ],
+        "name": "Blogs",
+        "maintainers": [
+          "tyl0622"
+        ],
+        "location": "blog.ts"
+      }
+    },
+    "name": "njuferret",
+    "url": "njuferret.github.io",
+    "description": "",
+    "zh": {
+      "name": "有点博客"
+    }
   },
   "njupt": {
     "routes": {
@@ -41647,13 +41816,67 @@
     "routes": {
       "/:category{.+}?": {
         "path": "/:category{.+}?",
-        "name": "Unknown",
-        "maintainers": [],
+        "name": "Topic",
+        "url": "papers.cool",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/papers/arxiv/cs.AI",
+        "parameters": {
+          "category": "Category, arXiv Artificial Intelligence (cs.AI) by default"
+        },
+        "description": ":::tip\n  If you subscribe to [arXiv Artificial Intelligence (cs.AI)](https://papers.cool/arxiv/cs.AI)，where the URL is `https://papers.cool/arxiv/cs.AI`, extract the part `https://papers.cool/` to the end, and use it as the parameter to fill in. Therefore, the route will be [`/papers/arxiv/cs.AI`](https://rsshub.app/papers/arxiv/cs.AI).\n  :::\n\n  | Category                                              | id          |\n  | ----------------------------------------------------- | ----------- |\n  | arXiv Artificial Intelligence (cs.AI)                 | arxiv/cs.AI |\n  | arXiv Computation and Language (cs.CL)                | arxiv/cs.CL |\n  | arXiv Computer Vision and Pattern Recognition (cs.CV) | arxiv/cs.CV |\n  | arXiv Machine Learning (cs.LG)                        | arxiv/cs.LG |\n  ",
+        "categories": [
+          "journal"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": true
+        },
+        "radar": [
+          {
+            "title": "arXiv Artificial Intelligence (cs.AI)",
+            "source": [
+              "papers.cool/arxiv/cs.AI"
+            ],
+            "target": "/arxiv/cs.AI"
+          },
+          {
+            "title": "arXiv Computation and Language (cs.CL)",
+            "source": [
+              "papers.cool/arxiv/cs.CL"
+            ],
+            "target": "/arxiv/cs.CL"
+          },
+          {
+            "title": "arXiv Computer Vision and Pattern Recognition (cs.CV)",
+            "source": [
+              "papers.cool/arxiv/cs.CV"
+            ],
+            "target": "/arxiv/cs.CV"
+          },
+          {
+            "title": "arXiv Machine Learning (cs.LG)",
+            "source": [
+              "papers.cool/arxiv/cs.LG"
+            ],
+            "target": "/arxiv/cs.LG"
+          }
+        ],
         "location": "index.ts"
       }
     },
     "name": "Cool Papers",
-    "url": "papers.cool"
+    "url": "papers.cool",
+    "categories": [
+      "journal"
+    ],
+    "description": ""
   },
   "paradigm": {
     "routes": {
@@ -60742,8 +60965,12 @@
     "routes": {
       "/dean/:subpath{.+}": {
         "path": "/dean/:subpath{.+}",
-        "name": "Unknown",
-        "maintainers": [],
+        "name": "教务处",
+        "maintainers": [
+          "hoilc"
+        ],
+        "example": "/xjtu/dean/jxxx/jxtz2",
+        "description": "打开一个类似 <https://dean.xjtu.edu.cn/jxxx/jxtz2.htm> 的网址，在 `.cn` 后的内容就是 subpath，此例中是 `jxxx/jxtz2`",
         "location": "dean.ts"
       },
       "/ee/:id?": {
@@ -64127,12 +64354,12 @@
   },
   "zhubai": {
     "routes": {
-      "/:id": {
-        "path": "/:id",
+      "/posts/:id": {
+        "path": "/posts/:id",
         "categories": [
           "blog"
         ],
-        "example": "/zhubai/via",
+        "example": "/zhubai/posts/via",
         "parameters": {
           "id": "`id` 为竹白主页 url 中的三级域名，如 via.zhubai.love 的 `id` 为 `via`"
         },
