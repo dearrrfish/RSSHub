@@ -6318,6 +6318,19 @@
       }
     ]
   },
+  "zj.gov.cn": {
+    "_name": "中国人民银行",
+    "search": [
+      {
+        "title": "浙江省人民政府-全省政府网站统一搜索",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/jsearchfront/search.do"
+        ],
+        "target": "/gov/zj/search/:websiteid?/:word/:cateid?"
+      }
+    ]
+  },
   "greasyfork.org": {
     "_name": "Greasy Fork",
     ".": [
@@ -8414,6 +8427,27 @@
           "/blog/*"
         ],
         "target": "/konghq/blog-posts"
+      }
+    ]
+  },
+  "kpmg.com": {
+    "_name": "KPMG",
+    ".": [
+      {
+        "title": "Insights",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/xx/en/home/insights.html"
+        ],
+        "target": "/kpmg/insights/en"
+      },
+      {
+        "title": "Insights",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/cn/zh/home/insights.html"
+        ],
+        "target": "/kpmg/insights/zh"
       }
     ]
   },
