@@ -2905,6 +2905,9 @@
   "/ieee-security/security-privacy": [
     "ZeddYu"
   ],
+  "/iehou/:category?": [
+    "nczitzk"
+  ],
   "/ielts/": [
     "zenxds"
   ],
@@ -4148,6 +4151,9 @@
   ],
   "/oilchem/:type?/:category?/:subCategory?": [
     "nczitzk"
+  ],
+  "/ollama/library": [
+    "Nick22nd"
   ],
   "/oncc/:language/:channel?": [
     "Fatpandac"
